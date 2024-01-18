@@ -10,7 +10,7 @@
       src="https://kit.fontawesome.com/c2978570b8.js"
       crossorigin="anonymous"
     ></script>
-    
+
     <!-- outfit font cdn -->
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -26,7 +26,12 @@
     />
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/preload.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/light-mode.css" />
+    <link rel="stylesheet" href="styles/dark-mode.css" />
+    <link rel="stylesheet" href="styles/sm-responsive.css" />
 
     <!-- bootstrap scripts -->
     <script
@@ -37,7 +42,8 @@
 
     <title>Basil, Ugo</title>
   </head>
-  <body>
+  <body class="">
+    
     <div class="container-fluid full-content">
       <section id="title" class="divider">
         <!-- nav bar -->
@@ -45,7 +51,6 @@
         <nav class="navbar navbar-expand-lg navigation-bar">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
-              <!-- <img src="" alt="logo-image  " width="30" height="24" /> -->
               <!-- modal links -->
               <!-- Button trigger modal -->
               <a
@@ -79,12 +84,7 @@
                     </div>
                     <div class="modal-body">
                       <div class="row">
-                        <!-- <div class="col-lg-4 col-md-6 modal-link">
-                          <a href="instagram.com/thebasilugo"
-                            ><i class="fa-brands fa-instagram"></i
-                            >&ThinSpace;Instagram</a
-                          >
-                        </div> -->
+                        
                         <div class="col-lg-4 col-md-6 modal-link">
                           <a href="linkedin.com/in/thebasilugo"
                             ><i class="fa-brands fa-linkedin"></i
@@ -103,9 +103,7 @@
                             >&ThinSpace;GitHub</a
                           >
                         </div>
-                        <!-- <div class="col-lg-4 col-md-6 modal-link">
-                        <a href="wattpad.com/thebasilugo">wattpad</a>
-                        </div> -->
+                        
                         <div class="col-lg-6 col-md-6 modal-link">
                           <a href="mailto:basilugo2@gmail.com"
                             ><i class="fa-solid fa-envelope"></i>&ThinSpace;send
@@ -148,12 +146,6 @@
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link" href="#about">about</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#projects">projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact">contact</a>
                 </li>
               </ul>
             </div>
@@ -202,7 +194,28 @@
         </div>
       </section>
 
-      <br /><br />
+      <!-- about -->
+      <section id="about" class="divider">
+        <h3>About me</h3>
+        <br />
+        <p class="about-text">
+          I'm Ugochukwu and I am a JavaScript developer.
+          <br />
+          <br />
+          I've got a Computer Science bachelors' with 3+ years of combined
+          experience in Responsive web design, Frontend development, Object
+          Oriented Programming, version control and several other concepts, all
+          up my sleeve. My budding curiosity and attention to detail gives me a
+          keen-eyed advantage as regards matters relating to creativity. I am
+          passionate about designing and development, even in ways front-end
+          devs see as "ridiculous".
+          <br />
+          <br />
+          In a nutshell, I love what I do<em
+            >...and I'd love to connect with you.</em
+          >
+        </p>
+      </section>
       
       <!-- footer -->
       <footer id="footer">
