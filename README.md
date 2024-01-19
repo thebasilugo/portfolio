@@ -20,7 +20,7 @@ To view the portfolio, simply visit [thebasilugo.github.io/portfolio](https://th
 - **Google Fonts**: Includes Outfit fonts.
 - **GitHub Pages**: Hosting platform for the deployed portfolio.
 
-<!--
+
 ## Sections
 
 1. **Title Section**
@@ -30,7 +30,7 @@ To view the portfolio, simply visit [thebasilugo.github.io/portfolio](https://th
 
 2. **About Me Section**
    - Introduction with a "Read More" option for additional details.
-
+<!--
 3. **Skills Section**
    - Displays technical skills in a responsive grid layout.
 
@@ -45,10 +45,10 @@ To view the portfolio, simply visit [thebasilugo.github.io/portfolio](https://th
 
 7. **Contact Section**
    - Call-to-action for reaching out.
-
-8. **Footer Section**
-   - Copyright information and modal link.
 -->
+3. **Footer Section**
+   - Copyright information <!-- and modal link. -->
+
 ## Contact
 
 For inquiries or collaborations, feel free to reach out via [email](mailto:basilugo2@gmail.com) or connect on [LinkedIn](https://linkedin.com/in/thebasilugo) and [Twitter](https://twitter.com/thebasilugo).
