@@ -1,33 +1,10 @@
-/* main */
-:root {
-  --text-dark: #212529;
-  --text-light: #f8f9fa;
-  --bg-light: #d0d0d0;
-  --bg-dark: #060513;
-  --text-font: "Outfit";  
-  --section-divider: #a1a1a1;
-}
-/* main-end */
-
-/* light-mode */
-/* animations */
-  /* animation for onpageload */
-    @keyframes fadeInAnimation {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-}
-
 /* general styles */
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    animation: fadeInAnimation ease 3.5s;
+    animation: fadeInAnimation ease 4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     background-color: var(--bg-light);
@@ -44,14 +21,23 @@
 
   h1 {
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.5;
   }
 
   h2 {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    color: #313131;
     /* line-height: 1.5; */
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+  
+  p {
+    font-weight: 200;
   }
 
   section > h3 {
@@ -60,10 +46,12 @@
 
   .divider {
     margin-bottom: 4%;
-    padding: 0 0 4%; 
+    padding: 0 0 4%;
     border-bottom: 1px solid var(--section-divider);
     }
 /* end of general styles */
+
+
 /* title */
   #title {
     /* background-color: rgb(228, 134, 134); */
@@ -78,6 +66,7 @@
 
   .title-image {
     width: 100%;
+    /* float: right; */
     border-radius: 100%;
     border: 2px solid var(--text-dark);
     /* transform: rotate(-10deg); */
@@ -118,7 +107,7 @@
     /* end of navbar-brand */
 
     .navigation-bar {
-      padding: 0 0 4.5rem;
+      padding: 0 0 4rem;
       /* visibility: hidden; */
     }
     
@@ -129,15 +118,9 @@
     .nav-link {
       font-size: 1.2rem;
       opacity: 0.7;
-      display: none;
     }
   /* end of navbar */
-  
-  /* fixed-bottom navbar */
-    .fa-moon, .fa-sun {
-      transform: translateY(6px);
-    }
-  /* end of fixed-bottom navbar */
+
   
   /* title buttons */
     .title-button {
@@ -157,6 +140,35 @@
     }
   /* end of title buttons */
 /* end of title */
+
+/* about */
+  .about-text {
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+
+  em span {
+    text-decoration: underline;
+  }
+  
+  .show-more-text {
+    display: block;
+  }
+
+  .hide-more-text {
+    display: none;
+  }
+
+  .read-more2 {
+    display: none;
+  }
+
+  .about-btn {
+    margin: 4% 0 4%;
+    color: var(--text-light);
+  }
+/* end of about */
+
 
 /* footer */
   #footer {
@@ -180,5 +192,4 @@
     text-decoration: underline;
   }
 /* end of footer */
-/* light-mode-end */
 
