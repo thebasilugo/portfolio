@@ -25,6 +25,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- fade in-out -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <!-- stylesheet -->
     <link rel="stylesheet" href="styles.css" />
 
@@ -38,6 +41,11 @@
     <title>Basil, Ugo</title>
   </head>
   <body>
+    Preloader Container -->
+    <!-- <div id="preloader">
+      <div id="loader"></div>
+    </div>
+
     <div class="container-fluid full-content">
       <section id="title" class="divider">
         <!-- nav bar -->
@@ -49,7 +57,7 @@
               <!-- Button trigger modal -->
               <a
                 type="button"
-                class="navbar-brand modal-link header-modal-btn"
+                class="navbar-brand header-modal-btn"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
@@ -77,31 +85,36 @@
                       ></button>
                     </div>
                     <div class="modal-body">
-                      
-                        <div class="col-lg-4 col-md-6 modal-link">
-                          <a href="linkedin.com/in/thebasilugo"
-                            ><i class="fa-brands fa-linkedin"></i
-                            >&ThinSpace;LinkedIn</a
+                      <div class="row">
+                        <!-- <div class="col-lg-4 col-md-6">
+                          <a href="instagram.com/thebasilugo"
+                            ><i class="fa-brands fa-instagram fa-2x"></i
+                            ></a
                           >
+                        </div> -->
+                        <div class="col-lg-4 col-md-6">
+                          <a href="linkedin.com/in/thebasilugo"
+                            ><i class="fa-brands fa-linkedin fa-2x"></i
+                          ></a>
                         </div>
-                        <div class="col-lg-4 col-md-6 modal-link">
+                        <div class="col-lg-4 col-md-6">
                           <a
                             href="https://twitter.com/intent/follow?screen_name=thebasilugo"
-                            ><i class="fa-brands fa-twitter"></i
-                            >&ThinSpace;Twitter</a
-                          >
+                            ><i class="fa-brands fa-twitter fa-2x"></i
+                          ></a>
                         </div>
-                        <div class="col-lg-4 col-md-6 modal-link">
+                        <div class="col-lg-4 col-md-6">
                           <a href="github.com/thebasilugo">
-                            <i class="fa-brands fa-github"></i
-                            >&ThinSpace;GitHub</a
-                          >
-                       
-                        <div class="col-lg-6 col-md-6 modal-link">
+                            <i class="fa-brands fa-github fa-2x"></i
+                          ></a>
+                        </div>
+                        <!-- <div class="col-lg-4 col-md-6">
+                        <a href="wattpad.com/thebasilugo">wattpad</a>
+                        </div> -->
+                        <div class="col-lg-6 col-md-6">
                           <a href="mailto:basilugo2@gmail.com"
-                            ><i class="fa-solid fa-envelope"></i>&ThinSpace;send
-                            an Email</a
-                          >
+                            ><i class="fa-solid fa-envelope fa-2x"></i
+                          ></a>
                         </div>
                       </div>
                     </div>
@@ -157,7 +170,7 @@
             <!-- title image -->
             <img
               class="img-responsive title-image"
-              src="images/thebasilugo.jpg"
+              src="images/basil.jpg"
               alt="title-image"
             />
           </div>
@@ -187,7 +200,6 @@
       <!-- about -->
       <section id="about" class="divider">
         <h3>About me</h3>
-        <br />
         <p class="about-text">
           I'm Ugochukwu and I am a JavaScript developer.
           <br />
@@ -207,13 +219,80 @@
         </p>
       </section>
 
-      <!-- footer -->
-      <footer id="footer">
-        <p>
-          &copy;copyright 2024
-          <a type="button" class="footer-modal-btn">thebasilugo</a>
-        </p>
-      </footer>
+      <!-- contact -->
+      <section id="contact" class="feature-box">
+        <h3>Reach out!</h3>
+        <p>send a text today. don't delay!</p>
+        <form
+          action="https://getform.io/f/d833b211-28ad-4e16-b980-8d651feabd80"
+          method="POST"
+          class=""
+        >
+          <input
+            type="hidden"
+            name="_gotcha"
+            style="display: none !important"
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            class="rounded-md"
+            required=""
+          /><input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            class="rounded-md"
+            required=""
+          /><textarea
+            name="message"
+            placeholder="Enter your message"
+            rows="8"
+            cols="19"
+            class="rounded-md"
+            required=""
+          ></textarea
+          ><button class="rounded-md btn btn-dark">Let's talk</button>
+        </form>
+        <!-- footer -->
+        <footer id="footer">
+          <div class="social-icons">
+            <a href="mailto:example@email.com">
+              <i class="fa-solid fa-envelope fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/thebasilugo">
+              <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+            <a href="github.com/thebasilugo">
+              <i class="fa-brands fa-github fa-2x"></i>
+            </a>
+            <a href="twitter.com/thebasilugo">
+              <i class="fa-brands fa-twitter fa-2x"></i>
+            </a>
+            <a href="instagram.com/thebasilugo">
+              <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+          </div>
+          <p>
+            &copy;copyright 2024
+            <a type="button" class="footer-modal-btn">thebasilugo</a>
+          </p>
+        </footer>
+
+        <a
+          type="button"
+          id="window-mode"
+          class="fa-solid active side-btn fa-moon"
+        ></a>
+
+        <a
+          href="#"
+          type="button"
+          id="scroll-up"
+          class="fa-solid fa-angle-up active side-btn"
+        ></a>
+      </section>
     </div>
     <script src="index.js"></script>
   </body>
