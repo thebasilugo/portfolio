@@ -1,3 +1,31 @@
+:root {
+  --text-dark: #212529;
+  --text-light: #f8f9fa;
+  --bg-light: #d0d0d0;
+  --bg-dark: #060513;
+  --text-font: "Outfit";  
+  --section-divider: #a1a1a1;
+}
+
+/* 
+* this stylesheet is the sheet with the main styles
+* and it's in light mode (the default page style)
+* it contains the whole webpage styles 
+* which differ from the bootstrap prestyled classes
+*/
+
+/* another option for onpageload */
+  /*body {
+    opacity: 0;
+    transition: opacity 5s;
+  }*/
+
+  /* in html */
+
+  /* <body onload="document.body.style.opacity='1'">*/
+/* end of animations */
+
+
 /* general styles */
   html {
     scroll-behavior: smooth;
@@ -53,12 +81,6 @@
 
 
 /* title */
-  #title {
-    /* background-color: rgb(228, 134, 134); */
-    /* color: #fff; */ 
-    /* text-align: center; */
-  }
-
   .title-text {
     /* background-color: red; */
     font-size: 1.2rem;
@@ -170,6 +192,93 @@
 /* end of about */
 
 
+/* skills */
+  #skills {
+    font-size: 1rem;
+  }
+
+  .skill {
+    border: 1px solid black;
+    text-align: center;
+    padding: 12px 0 0;
+    display: inline;
+    border-radius: 8px;
+    margin: 4px;
+    font-weight: 900;
+  }
+
+  /* .skill:hover {
+    color: #060513;
+    font-weight: 700;
+  } */
+/* end of skills */
+
+
+/* projects */
+#projects {
+  padding: 7% 0;
+}
+
+#projects .feature-box {
+  padding: 2% 0;
+}
+
+.project-image {
+  width: 230px;
+}
+
+#projects h3 {
+  padding: 1px 0;
+}
+
+.feature-box {
+  text-align: center;
+  /* padding: 5%; */
+  /* border: 1px solid red; */
+}
+
+/* end of features */
+/* end of projects */
+
+
+/* mentees */
+  #mentees {
+    height: 20%;
+    text-align: center;
+  }
+
+  #mentees h2 {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .mentee-image {
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+
+  .carousel-item {
+    padding: 7% 15%;
+  }
+/* end of mentees */
+
+
+/* press */
+  #press {
+    text-align: center;
+    padding: 0 0 3%;
+  }
+/* end of press */
+
+
+/* fixed-bottom navbar */
+  .fa-moon, .fa-sun {
+    transform: translateY(6px);
+  }
+/* end of fixed-bottom navbar */
+
+
 /* footer */
   #footer {
     padding: 8% 0;
@@ -191,5 +300,264 @@
   footer p a:hover {
     text-decoration: underline;
   }
+
+  .social-icons a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin: 20px;
+  }
+  
+  .social-icons i {
+    margin: 10px auto 40px;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .social-icons i:hover {
+    color: #000;
+    transform: translateY(-2px);
+  }
 /* end of footer */
 
+/* side-btns */
+.side-btn {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  text-decoration: none;
+  position: fixed;
+  z-index: 20;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(130%);
+  transition: 0.4s;
+}
+
+.side-btn.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.side-btn:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+.side-btn::after {
+  display: inline-block;
+  font-family: Flaticon;
+  font-size: 18px;
+}
+  /* scroll up */
+  #scroll-up {
+    /* bottom: 30px; */
+    bottom: 75px;
+    right: -1px;
+    border-radius: 5px 0 0 5px;
+  }
+
+  /* window mode */
+  #window-mode {
+    bottom: 75px;
+    left: -1px;
+    border-radius: 0 5px 5px 0;
+  }
+/* end of side-btns */
+
+form {
+  padding: 0px;
+  /* width: 700px; */
+  margin: 0 auto;
+}
+
+.rounded-md  {
+  color: var(--text-dark);
+  padding: 4px;
+  margin: 4px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+textarea.rounded-md {
+  display: block;
+  margin: 4px auto;
+  width: 275px;
+}
+
+button.rounded-md {
+  display: block;
+  margin: 20px auto 0;
+  padding: 0 24px;
+  color: var(--text-light);
+}
+
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+body.dark-mode h2 {
+  color: #cecece;
+}
+
+body.dark-mode .navbar-brand {
+  color: var(--github-white-font);
+}
+
+body.dark-mode .nav-link, 
+body.dark-mode .navbar-toggler-icon{
+  color:  var(--text-light);
+}
+
+body.dark-mode .btn-dark {
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+body.dark-mode .title-button {
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+body.dark-mode .skill {
+  border: 1px solid var(--bg-light);
+}
+
+body.dark-mode footer p {
+  color: var(--text-light);
+  opacity: 0.2;
+}
+
+body.dark-mode footer p a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+body.dark-mode footer p a:hover {
+  text-decoration: underline;
+}
+
+body.dark-mode .social-icons i {
+color: var(--bg-light);}
+
+body.dark-mode .side-btn {
+  background: var(--bg-light);
+  color: var(--bg-dark);
+}
+
+body.dark-mode .rounded-md {
+  background: var(--bg-dark);
+  border: 1px solid var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark-mode button.rounded-md {
+  color: var(--text-dark);
+  background: var(--bg-light);
+}
+
+body.dark-mode button.rounded-md:hover {
+  color: var(--text-light);
+  background: var(--bg-dark);
+  border: 1px solid var(--bg-light);
+}
+
+
+/* phone responsiveness */
+/* for col-sm-12 */
+@media only screen and (max-width: 767px) {
+  /* title */
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    width: 12rem;
+  }
+
+  /* about me */
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .social-icons a {
+    margin: 8px;
+  }
+}
+
+/* before col-sm-12 */
+@media only screen and (max-width: 860px) {
+  section > h3 {
+    padding: 30px 0 20px;
+  }
+  
+br {
+    display: none;
+  }
+
+  .divider {
+    margin: 0 0 10%;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  section > h3 {
+    padding: 24px 0 32px;
+  }
+
+  .title-text h1{
+    font-size: 2rem;
+  }
+
+  .title-text h2{
+    font-size: 1.3rem;
+  }
+
+  .title-text p{
+    font-size: 1rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* animations */
+  /* preloader spin */
+  @keyframes spin {
+    0% { 
+      transform: rotate(0deg); 
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  /* remove preloader */
+  @keyframes fadeOutAnimation {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* onpageload */
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
