@@ -1,0 +1,72 @@
+:root {
+  --darkmode-h2: #cecece;
+}
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+body.dark-mode h2 {
+  color: var(--darkmode-h2);
+}
+
+body.dark-mode .navbar-brand {
+  color: var(--github-white-font);
+}
+
+body.dark-mode .nav-link, 
+body.dark-mode .navbar-toggler-icon{
+  color:  var(--text-light);
+}
+
+body.dark-mode .title-button {
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+body.dark-mode .skill {
+  border: 1px solid var(--bg-light);
+}
+
+body.dark-mode .skill-btn {
+  color: var(--text-light);
+  border: 1px solid var(--bg-light);
+}
+
+body.dark-mode .skill-btn:hover {
+  color: var(--text-light);
+}
+
+body.dark-mode footer p {
+  color: var(--text-light);
+  opacity: 0.2;
+}
+
+body.dark-mode footer p a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+body.dark-mode footer p a:hover {
+  text-decoration: underline;
+}
+
+body.dark-mode .social-icons i {
+color: var(--bg-light);}
+
+body.dark-mode .side-btn {
+  background: var(--bg-light);
+  color: var(--bg-dark);
+}
+
+body.dark-mode .rounded-md {
+  background: var(--bg-dark);
+  border: 1px solid var(--bg-light);
+  color: var(--text-light);
+  transition: all 0.15s ease-in-out;
+}
+
+body.dark-mode button.rounded-md:hover {
+  background: #212529;
+}
