@@ -26,10 +26,15 @@
     />
 
     <!-- fade in-out -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/styles/preload.css" />
+    <link rel="stylesheet" href="assets/styles/animations.css" />
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/light-mode.css" />
+    <link rel="stylesheet" href="assets/styles/dark-mode.css" />
+    <link rel="stylesheet" href="assets/styles/sm-responsive.css" />
 
     <!-- bootstrap scripts -->
     <script
@@ -38,11 +43,145 @@
       crossorigin="anonymous"
     ></script>
 
+    <style>
+      .skill-row {
+        display: grid;
+        grid-template-rows: 55px 55px 55px 55px 55px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+      .skill {
+        border: 1px solid var(--bg-dark);
+        border-radius: 8px;
+        padding: 8px;
+        font-size: 1.2em;
+        text-align: center;
+        margin: 4px;
+      }
+
+      .skill p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .skill-es6 {
+        grid-row: 1 / 2;
+        grid-column: 6 / 7;
+      }
+
+      .skill-attention-to-detail {
+        grid-row: 2 / 4;
+        grid-column: 6 / 7;
+        padding: 25px 20px;
+      }
+
+      .skill-oop {
+        grid-row: 3 / 4;
+        grid-column: 2 / 5;
+      }
+
+      .skill-time-management {
+        grid-row: 4 / 5;
+        grid-column: 4 / 6;
+      }
+
+      #skill-sm-button {
+        display: none;
+      }
+
+      .skill-dynamic-design {
+        display: none;
+      }
+
+      @media only screen and (min-width: 1370px) {
+        .skill-dynamic-design {
+          display: inline;
+        }
+      }
+
+      @media only screen and (max-width: 1370px) {
+        .skill-web-design {
+          grid-row: 2 / 4;
+          grid-column: 1 / 2;
+          padding: 20px;
+        }
+      }
+
+      @media only screen and (min-width: 985px) and (max-width: 1130px) {
+        .full-content {
+          padding: 3% 12% 0;
+        }
+        .divider {
+          width: 800px;
+        }
+      }
+
+      @media only screen and (max-width: 990px) {
+        .skill-row {
+          display: grid;
+          font-size: 0.75rem;
+          grid-template-rows: 50px 50px 50px 50px;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+
+      @media only screen and (max-width: 905px) {
+        .divider {
+          border-bottom: 1px solid transparent;
+        }
+      }
+
+      @media only screen and (max-width: 830px) {
+        .full-content {
+          padding: 3% 9% 0;
+        }
+      }
+
+      @media only screen and (min-width: 770px) {
+        .sm-screen-skill {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 770px) {
+        .skill-row {
+          display: block;
+          font-size: 0.75rem;
+          /* grid-template-rows: 20px 20px;
+          grid-template-columns: 100px 100px;
+          display: block; */
+        }
+        .skill {
+          margin: 4px 2px;
+          font-size: 1rem;
+          padding: 10px;
+          display: inline-block;
+        }
+
+        #skill-sm-button {
+          display: inline;
+        }
+
+        .not-sm-screen-skill {
+          display: none;
+        }
+        /*
+        .skill-oop {
+          padding: 0;
+        }
+        .skill-attention-to-detail {
+          padding: 0;
+        }
+        .skill-web-design {
+          padding: 0;
+        } */
+      }
+    </style>
+
     <title>Basil, Ugo</title>
   </head>
   <body>
-<!--     Preloader Container --> 
-   <div id="preloader">
+    <!-- Preloader Container -->
+    <div id="preloader">
       <div id="loader"></div>
     </div>
 
@@ -53,6 +192,7 @@
         <nav class="navbar navbar-expand-lg navigation-bar">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
+              <!-- <img src="" alt="logo-image  " width="30" height="24" /> -->
               <!-- modal links -->
               <!-- Button trigger modal -->
               <a
@@ -170,7 +310,7 @@
             <!-- title image -->
             <img
               class="img-responsive title-image"
-              src="images/thebasilugo.jpg"
+              src="images/basil.jpg"
               alt="title-image"
             />
           </div>
@@ -219,10 +359,160 @@
         </p>
       </section>
 
-      <!-- contact -->
-      <section id="contact" class="feature-box">
-        <h3>Reach out!</h3>
-        <p>send a text today. don't delay!</p>
+      <!-- skills -->
+
+      <section id="skills" class="divider">
+        <h3>Skills</h3>
+        <div class="skill-row">
+          <div class="skill skill-html">
+            <p>HTML</p>
+          </div>
+
+          <div class="skill skill-css">
+            <p>CSS</p>
+          </div>
+
+          <div class="skill skill-js">
+            <p>Javascript</p>
+          </div>
+
+          <div class="skill skill-git">
+            <p>Git</p>
+          </div>
+
+          <div class="skill skill-github">
+            <p>GitHub</p>
+          </div>
+
+          <span id="more-skills" class="hide-more-skills">
+            <div class="skill skill-es6 sm-screen-skill">
+              <p>ES6+</p>
+            </div>
+
+            <div class="skill skill-web-design sm-screen-skill">
+              <p>Web Design</p>
+            </div>
+
+            <div class="skill skill-canva sm-screen-skill">
+              <p>Canva</p>
+            </div>
+
+            <div class="skill skill-teamwork sm-screen-skill">
+              <p>Teamwork</p>
+            </div>
+
+            <div class="skill skill-research sm-screen-skill">
+              <p>Research</p>
+            </div>
+
+            <div class="skill skill-wireframing sm-screen-skill">
+              <p>Wireframing</p>
+            </div>
+
+            <div class="skill skill-bootstrap sm-screen-skill">
+              <p>Bootstrap</p>
+            </div>
+
+            <div class="skill skill-debugging sm-screen-skill">
+              <p>Debugging</p>
+            </div>
+
+            <div class="skill skill-creativity sm-screen-skill">
+              <p>Creativity</p>
+            </div>
+
+            <div class="skill skill-oop sm-screen-skill">
+              <p>Object Oriented Programming</p>
+            </div>
+
+            <div class="skill skill-jquery sm-screen-skill">
+              <p>JQuery</p>
+            </div>
+
+            <div class="skill skill-attention-to-detail sm-screen-skill">
+              <p>Attention to detail</p>
+            </div>
+
+            <div class="skill skill-sass sm-screen-skill">
+              <p>SASS</p>
+            </div>
+
+            <div class="skill skill-time-management sm-screen-skill">
+              <p>Time management</p>
+            </div>
+
+            <div class="skill skill-dynamic-design sm-screen-skill">
+              <p>Dynamic design</p>
+            </div>
+          </span>
+
+          <button
+            id="skill-sm-button"
+            class="btn btn-outline-dark btn-dark skill-btn"
+          >
+            Show more
+          </button>
+
+          <div class="skill skill-es6 not-sm-screen-skill">
+            <p>ES6+</p>
+          </div>
+
+          <div class="skill skill-web-design not-sm-screen-skill">
+            <p>Web Design</p>
+          </div>
+
+          <div class="skill skill-canva not-sm-screen-skill">
+            <p>Canva</p>
+          </div>
+
+          <div class="skill skill-teamwork not-sm-screen-skill">
+            <p>Teamwork</p>
+          </div>
+
+          <div class="skill skill-research not-sm-screen-skill">
+            <p>Research</p>
+          </div>
+
+          <div class="skill skill-wireframing not-sm-screen-skill">
+            <p>Wireframing</p>
+          </div>
+
+          <div class="skill skill-bootstrap not-sm-screen-skill">
+            <p>Bootstrap</p>
+          </div>
+
+          <div class="skill skill-debugging not-sm-screen-skill">
+            <p>Debugging</p>
+          </div>
+
+          <div class="skill skill-creativity not-sm-screen-skill">
+            <p>Creativity</p>
+          </div>
+
+          <div class="skill skill-oop not-sm-screen-skill">
+            <p>Object Oriented Programming</p>
+          </div>
+          <div class="skill skill-jquery not-sm-screen-skill">
+            <p>JQuery</p>
+          </div>
+          <div class="skill skill-attention-to-detail not-sm-screen-skill">
+            <p>Attention to detail</p>
+          </div>
+
+          <div class="skill skill-sass not-sm-screen-skill">
+            <p>SASS</p>
+          </div>
+
+          <div class="skill skill-time-management not-sm-screen-skill">
+            <p>Time management</p>
+          </div>
+
+          <div class="skill skill-dynamic-design not-sm-screen-skill">
+            <p>Dynamic design</p>
+          </div>
+        </div>
+      </section>
+
         <form
           action="https://getform.io/f/d833b211-28ad-4e16-b980-8d651feabd80"
           method="POST"
@@ -294,6 +584,10 @@
         ></a>
       </section>
     </div>
-    <script src="index.js"></script>
+    <!-- scripts -->
+    <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/modal.js"></script>
+    <script src="assets/scripts/preload.js"></script>
+    <script src="assets/scripts/theme.js"></script>
   </body>
 </html>
