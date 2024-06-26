@@ -60,7 +60,7 @@ To view the portfolio, simply visit [thebasilugo.github.io/portfolio](https://th
    - Placeholder for press-related content.
 
 7. **Contact Section**
-   - Call-to-action for reaching out.
+   - Section for reaching out.
      -->
 8. **Footer Section**
    - Copyright information <!-- and modal link. -->
