@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/c2978570b8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- outfit font cdn -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- fade in-out -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/styles/preload.css" />
+    <link rel="stylesheet" href="assets/styles/animations.css" />
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/light-mode.css" />
+    <link rel="stylesheet" href="assets/styles/dark-mode.css" />
+    <link rel="stylesheet" href="assets/styles/sm-responsive.css" />
+
+    <!-- bootstrap scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .skill-row {
+        display: grid;
+        grid-template-rows: 55px 55px 55px 55px 55px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+      .skill {
+        border: 1px solid var(--bg-dark);
+        border-radius: 8px;
+        padding: 8px;
+        font-size: 1.2em;
+        text-align: center;
+        margin: 4px;
+      }
+
+      .skill p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .skill-es6 {
+        grid-row: 1 / 2;
+        grid-column: 6 / 7;
+      }
+
+      .skill-attention-to-detail {
+        grid-row: 2 / 4;
+        grid-column: 6 / 7;
+        padding: 25px 20px;
+      }
+
+      .skill-oop {
+        grid-row: 3 / 4;
+        grid-column: 2 / 5;
+      }
+
+      .skill-time-management {
+        grid-row: 4 / 5;
+        grid-column: 4 / 6;
+      }
+
+      #skill-sm-button {
+        display: none;
+      }
+
+      .skill-dynamic-design {
+        display: none;
+      }
+
+      @media only screen and (min-width: 1370px) {
+        .skill-dynamic-design {
+          display: inline;
+        }
+      }
+
+      @media only screen and (max-width: 1370px) {
+        .skill-web-design {
+          grid-row: 2 / 4;
+          grid-column: 1 / 2;
+          padding: 20px;
+        }
+      }
+
+      @media only screen and (min-width: 985px) and (max-width: 1130px) {
+        .full-content {
+          padding: 3% 12% 0;
+        }
+        .divider {
+          width: 800px;
+        }
+      }
+
+      @media only screen and (max-width: 990px) {
+        .skill-row {
+          display: grid;
+          font-size: 0.75rem;
+          grid-template-rows: 50px 50px 50px 50px;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+
+      @media only screen and (max-width: 905px) {
+        .divider {
+          border-bottom: 1px solid transparent;
+        }
+      }
+
+      @media only screen and (max-width: 830px) {
+        .full-content {
+          padding: 3% 9% 0;
+        }
+      }
+
+      @media only screen and (min-width: 770px) {
+        .sm-screen-skill {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 770px) {
+        .skill-row {
+          display: block;
+          font-size: 0.75rem;
+          /* grid-template-rows: 20px 20px;
+          grid-template-columns: 100px 100px;
+          display: block; */
+        }
+        .skill {
+          margin: 4px 2px;
+          font-size: 1rem;
+          padding: 10px;
+          display: inline-block;
+        }
+
+        #skill-sm-button {
+          display: inline;
+        }
+
+        .not-sm-screen-skill {
+          display: none;
+        }
+        /*
+        .skill-oop {
+          padding: 0;
+        }
+        .skill-attention-to-detail {
+          padding: 0;
+        }
+        .skill-web-design {
+          padding: 0;
+        } */
+      }
+    </style>
+
+    <title>Basil, Ugo</title>
+  </head>
+  <body>
+<!--     <header> -->
+    <!-- Preloader Container -->
+    <!-- <div id="preloader">
+      <div id="loader"></div>
+    </div> -->
+
+    <div class="container-fluid full-content">
+      <section id="title" class="divider">
+        <!-- nav bar -->
+        <!-- nav bar with [md & sm screen sizes] responsiveness -->
+        <nav class="navbar navbar-expand-lg navigation-bar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <!-- <img src="" alt="logo-image  " width="30" height="24" /> -->
+              <!-- modal links -->
+              <!-- Button trigger modal -->
+              <a
+                type="button"
+                class="navbar-brand header-modal-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                thebasilugo
+              </a>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        contact links
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <!-- <div class="col-modal">
+                          <a href="instagram.com/thebasilugo"
+                            ><i class="fa-brands fa-instagram fa-2x"></i
+                            ></a
+                          >
+                        </div> -->
+                        <div class="col-modal">
+                          <a href="linkedin.com/in/thebasilugo"
+                            ><i class="fa-brands fa-linkedin fa-2x"></i
+                          ></a>
+                        </div>
+                        <div class="col-modal">
+                          <a
+                            href="https://twitter.com/intent/follow?screen_name=thebasilugo"
+                            ><i class="fa-brands fa-twitter fa-2x"></i
+                          ></a>
+                        </div>
+                        <div class="col-modal">
+                          <a href="github.com/thebasilugo">
+                            <i class="fa-brands fa-github fa-2x"></i
+                          ></a>
+                        </div>
+                        <!-- <div class="col-modal">
+                        <a href="wattpad.com/thebasilugo">wattpad</a>
+                        </div> -->
+                        <div class="col-modal">
+                          <a href="mailto:basilugo2@gmail.com"
+                            ><i class="fa-solid fa-envelope fa-2x"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary text-center"
+                        data-bs-dismiss="modal"
+                      >
+                        close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of modal links --></a
+            >
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">about</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+<!--         </header> -->
+
+<!--         <main> -->
+        <!-- title -->
+        <div class="row">
+          <div class="col-lg-3 col-md-5">
+            <!-- title image -->
+            <img
+              class="img-responsive title-image"
+              src="images/basil.jpg"
+              alt="title-image"
+            />
+          </div>
+          <div class="col-lg-9 col-md-7 title-text">
+            <h1>Basil Ugochukwu</h1>
+            <h2>JavaScript Developer</h2>
+            <p>
+              I'm a JavaScript engineer, with expertise in Frontend Web
+              Development and Responsive Web Design. Let's connect!
+            </p>
+            
+            <a class="btn btn-dark title-button" type="button" href="#contact">
+              <i class="fa-solid fa-briefcase"></i>&ThinSpace;&ThinSpace;work
+              with me
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section id="about" class="divider">
+        <h3>About me</h3>
+        <p class="about-text">
+          I'm Ugochukwu and I am a JavaScript developer.
+          <br />
+          <br />
+          I've got a Computer Science bachelors' with 3+ years of combined
+          experience in Responsive web design, Frontend development, Object
+          Oriented Programming, version control and several other concepts, all
+          up my sleeve. My budding curiosity and attention to detail gives me a
+          keen-eyed advantage as regards matters relating to creativity. I am
+          passionate about designing and development, even in ways front-end
+          devs see as "ridiculous".
+          <br />
+          <br />
+          In a nutshell, I love what I do<em
+            >...and I'd <span>love</span> to connect with you.</em
+          >
+        </p>
+      </section>
+
+      <!-- skills -->
+
+      <section id="skills" class="divider">
+        <h3>Skills</h3>
+        <div class="skill-row">
+          <div class="skill skill-html">
+            <p>HTML</p>
+          </div>
+
+          <div class="skill skill-css">
+            <p>CSS</p>
+          </div>
+
+          <div class="skill skill-js">
+            <p>Javascript</p>
+          </div>
+
+          <div class="skill skill-git">
+            <p>Git</p>
+          </div>
+
+          <div class="skill skill-github">
+            <p>GitHub</p>
+          </div>
+
+          <span id="more-skills" class="hide-more-skills">
+            <div class="skill skill-es6 sm-screen-skill">
+              <p>ES6+</p>
+            </div>
+
+            <div class="skill skill-web-design sm-screen-skill">
+              <p>Web Design</p>
+            </div>
+
+            <div class="skill skill-canva sm-screen-skill">
+              <p>Canva</p>
+            </div>
+
+            <div class="skill skill-teamwork sm-screen-skill">
+              <p>Teamwork</p>
+            </div>
+
+            <div class="skill skill-research sm-screen-skill">
+              <p>Research</p>
+            </div>
+
+            <div class="skill skill-wireframing sm-screen-skill">
+              <p>Wireframing</p>
+            </div>
+
+            <div class="skill skill-bootstrap sm-screen-skill">
+              <p>Bootstrap</p>
+            </div>
+
+            <div class="skill skill-debugging sm-screen-skill">
+              <p>Debugging</p>
+            </div>
+
+            <div class="skill skill-creativity sm-screen-skill">
+              <p>Creativity</p>
+            </div>
+
+            <div class="skill skill-oop sm-screen-skill">
+              <p>Object Oriented Programming</p>
+            </div>
+
+            <div class="skill skill-jquery sm-screen-skill">
+              <p>JQuery</p>
+            </div>
+
+            <div class="skill skill-attention-to-detail sm-screen-skill">
+              <p>Attention to detail</p>
+            </div>
+
+            <div class="skill skill-sass sm-screen-skill">
+              <p>SASS</p>
+            </div>
+
+            <div class="skill skill-time-management sm-screen-skill">
+              <p>Time management</p>
+            </div>
+
+            <div class="skill skill-dynamic-design sm-screen-skill">
+              <p>Dynamic design</p>
+            </div>
+          </span>
+
+          <button
+            id="skill-sm-button"
+            class="btn btn-outline-dark btn-dark skill-btn"
+          >
+            Show more
+          </button>
+
+          <div class="skill skill-es6 not-sm-screen-skill">
+            <p>ES6+</p>
+          </div>
+
+          <div class="skill skill-web-design not-sm-screen-skill">
+            <p>Web Design</p>
+          </div>
+
+          <div class="skill skill-canva not-sm-screen-skill">
+            <p>Canva</p>
+          </div>
+
+          <div class="skill skill-teamwork not-sm-screen-skill">
+            <p>Teamwork</p>
+          </div>
+
+          <div class="skill skill-research not-sm-screen-skill">
+            <p>Research</p>
+          </div>
+
+          <div class="skill skill-wireframing not-sm-screen-skill">
+            <p>Wireframing</p>
+          </div>
+
+          <div class="skill skill-bootstrap not-sm-screen-skill">
+            <p>Bootstrap</p>
+          </div>
+
+          <div class="skill skill-debugging not-sm-screen-skill">
+            <p>Debugging</p>
+          </div>
+
+          <div class="skill skill-creativity not-sm-screen-skill">
+            <p>Creativity</p>
+          </div>
+
+          <div class="skill skill-oop not-sm-screen-skill">
+            <p>Object Oriented Programming</p>
+          </div>
+          <div class="skill skill-jquery not-sm-screen-skill">
+            <p>JQuery</p>
+          </div>
+          <div class="skill skill-attention-to-detail not-sm-screen-skill">
+            <p>Attention to detail</p>
+          </div>
+
+          <div class="skill skill-sass not-sm-screen-skill">
+            <p>SASS</p>
+          </div>
+
+          <div class="skill skill-time-management not-sm-screen-skill">
+            <p>Time management</p>
+          </div>
+
+          <div class="skill skill-dynamic-design not-sm-screen-skill">
+            <p>Dynamic design</p>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- contact -->
+      <section id="contact" class="feature-box">
+        <h3>Reach out!</h3>
+        <p>send a text today. don't delay!</p>
+        <!-- <a
+          class="btn btn-outline-dark title-button"
+          type="button"
+          href="#projects"
+        >
+          <i class="fa-solid fa-book-open"></i>&ThinSpace;&ThinSpace;view my
+          portfolio
+        </a>
+        <a class="btn btn-dark title-button" type="button" href="#contact">
+          <i class="fa-solid fa-briefcase"></i>&ThinSpace;&ThinSpace;work with
+          me
+        </a> -->
+
+        <!-- from deolu website (uses getform.io, too )-->
+        <form
+          action="https://getform.io/f/d833b211-28ad-4e16-b980-8d651feabd80"
+          method="POST"
+          class=""
+        >
+          <input
+            type="hidden"
+            name="_gotcha"
+            style="display: none !important"
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            class="rounded-md"
+            required=""
+          /><input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            class="rounded-md"
+            required=""
+          /><textarea
+            name="message"
+            placeholder="Enter your message"
+            rows="8"
+            cols="19"
+            class="rounded-md"
+            required=""
+          ></textarea
+          ><button class="rounded-md btn btn-dark">Let's talk</button>
+        </form>
+<!--         </main> -->
+        
+        <!-- footer -->
+        <footer id="footer">
+          <div class="social-icons">
+            <a href="mailto:example@email.com">
+              <i class="fa-solid fa-envelope fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/thebasilugo">
+              <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+            <a href="github.com/thebasilugo">
+              <i class="fa-brands fa-github fa-2x"></i>
+            </a>
+            <a href="twitter.com/thebasilugo">
+              <i class="fa-brands fa-twitter fa-2x"></i>
+            </a>
+            <a href="instagram.com/thebasilugo">
+              <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+          </div>
+          <p>
+            &copy;copyright 2024
+            <a type="button" class="footer-modal-btn">thebasilugo</a>
+          </p>
+        </footer>
+
+        <a
+          type="button"
+          id="window-mode"
+          class="fa-solid active side-btn fa-moon"
+        ></a>
+
+        <a
+          href="#"
+          type="button"
+          id="scroll-up"
+          class="fa-solid fa-angle-up active side-btn"
+        ></a>
+      </section>
+    </div>
+    <!-- scripts -->
+    <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/modal.js"></script>
+    <script src="assets/scripts/preload.js"></script>
+    <script src="assets/scripts/theme.js"></script>
+  </body>
+</html>
