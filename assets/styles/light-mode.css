@@ -1,0 +1,385 @@
+/* 
+* this stylesheet is the sheet with the main styles
+* and it's in light mode (the default page style)
+* it contains the whole webpage styles 
+* which differ from the bootstrap prestyled classes
+*/
+
+/* another option for onpageload */
+  /*body {
+    opacity: 0;
+    transition: opacity 5s;
+  }*/
+
+  /* in html */
+
+  /* <body onload="document.body.style.opacity='1'">*/
+/* end of animations */
+
+
+/* general styles */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    animation: fadeInAnimation ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: var(--text-font); 
+    transition: opacity 0.25s ease-in,
+                background 1s ease-in-out,
+                color 1s ease-in-out;
+  }
+
+  .full-content {
+    padding: 3% 15% 0;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #313131;
+    /* line-height: 1.5; */
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+  
+  p {
+    font-weight: 200;
+  }
+
+  section > h3 {
+    padding: 24px 0 32px;
+  }
+
+  .divider {
+    margin-bottom: 4%;
+    padding: 0 0 4%;
+    border-bottom: 1px solid var(--section-divider);
+    }
+/* end of general styles */
+
+
+/* title */
+  .title-text {
+    /* background-color: red; */
+    font-size: 1.2rem;
+  }
+
+  .title-image {
+    width: 100%;
+    /* float: right; */
+    border-radius: 100%;
+    border: 2px solid var(--text-dark);
+    /* transform: rotate(-10deg); */
+    transform: rotate(0deg);
+    transition: all 0.26s ease-in-out;
+  }
+  /* navbar */
+    /* navbar-brand */
+      .navbar-brand {
+        opacity: 0.6;
+      }
+      /* modal */
+        .modal-body {
+          padding: 40px;
+        }
+
+        .col-modal {
+          flex: 0 0 auto;
+          width: 25%;
+        }
+
+        .col-modal a {
+          color: var(--text-dark);
+          transition: all 0.15s ease-in-out;
+        }
+
+        .col-modal a:hover {
+          color: rgb(40, 40, 74);
+        }
+
+        .modal-title {
+          color: #282828;
+          text-decoration: none;
+        }
+
+        .modal-link {
+          color: var(--text-dark);
+          text-decoration: none;
+          font-size: 1.3em;
+          margin: 2%;
+          padding: 2% 0;
+        }
+
+        .modal-link a {
+          color: var(--text-dark);
+          text-decoration: none;
+          border: 1px solid var(--bg-dark);
+          border-radius: 9px;
+          padding: 4px 12px;
+        }
+      /* end of modal */
+    /* end of navbar-brand */
+
+    .navigation-bar {
+      padding: 0 0 4rem;
+      /* visibility: hidden; */
+    }
+    
+    .navigation-bar button span{
+      color: var(--bg-light);
+    }
+    
+    .nav-link {
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
+  /* end of navbar */
+
+  
+  /* title buttons */
+    .title-button {
+      margin: 2% 2% 5% 0;
+      width: 12em;
+      transition: all 0.2s ease-in-out;
+      font-size: 1.1rem;
+    }
+
+    .btn-dark {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-dark:hover {
+      background: transparent;
+      color: var(--text-dark);
+    }
+  /* end of title buttons */
+/* end of title */
+
+/* about */
+  .about-text {
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+
+  em span {
+    text-decoration: underline;
+  }
+/* end of about */
+
+
+/* skills */
+  #skills {
+    font-size: 1rem;
+  }
+
+  .show-more-skills {
+    display: inline;
+  }
+
+  .hide-more-skills {
+    display: none;
+  }
+
+  .skill-btn {
+    margin: 4px auto;
+    color: var(--text-light);
+    padding: 10px;
+    transform: translate(4px, -2px);
+  }
+/* end of skills */
+
+
+/* projects */
+#projects {
+  padding: 7% 0;
+}
+
+#projects .feature-box {
+  padding: 2% 0;
+}
+
+.project-image {
+  width: 230px;
+}
+
+#projects h3 {
+  padding: 1px 0;
+}
+
+.feature-box {
+  text-align: center;
+  /* padding: 5%; */
+  /* border: 1px solid red; */
+}
+
+/* end of features */
+/* end of projects */
+
+
+/* mentees */
+  #mentees {
+    height: 20%;
+    text-align: center;
+  }
+
+  #mentees h2 {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .mentee-image {
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+
+  .carousel-item {
+    padding: 7% 15%;
+  }
+/* end of mentees */
+
+
+/* press */
+  #press {
+    text-align: center;
+    padding: 0 0 3%;
+  }
+/* end of press */
+
+
+/* fixed-bottom navbar */
+  .fa-moon, .fa-sun {
+    transform: translateY(6px);
+  }
+/* end of fixed-bottom navbar */
+
+
+/* footer */
+  #footer {
+    padding: 8% 0;
+    text-align: center;
+    font-weight: 200;
+    color: var(--bg-dark);
+  }
+
+  footer p {
+    color: var(--text-dark);
+    opacity: 0.7;
+  }
+  
+  footer p a {
+    color: var(--text-dark);
+    text-decoration: none;
+  }
+  
+  footer p a:hover {
+    text-decoration: underline;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin: 20px;
+  }
+  
+  .social-icons i {
+    margin: 10px auto 40px;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .social-icons i:hover {
+    color: #000;
+    transform: translateY(-2px);
+  }
+/* end of footer */
+
+/* side-btns */
+.side-btn {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  text-decoration: none;
+  position: fixed;
+  z-index: 20;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(130%);
+  transition: 0.4s;
+}
+
+.side-btn.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.side-btn:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+.side-btn::after {
+  display: inline-block;
+  font-family: Flaticon;
+  font-size: 18px;
+}
+  /* scroll up */
+  #scroll-up {
+    /* bottom: 30px; */
+    bottom: 75px;
+    right: -1px;
+    border-radius: 5px 0 0 5px;
+  }
+
+  /* window mode */
+  #window-mode {
+    bottom: 75px;
+    left: -1px;
+    border-radius: 0 5px 5px 0;
+  }
+/* end of side-btns */
+
+form {
+  padding: 0px;
+  /* width: 700px; */
+  margin: 0 auto;
+}
+
+.rounded-md  {
+  color: var(--text-dark);
+  padding: 4px;
+  margin: 4px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+textarea.rounded-md {
+  display: block;
+  margin: 4px auto;
+  width: 275px;
+}
+
+button.rounded-md {
+  display: block;
+  margin: 20px auto 0;
+  padding: 0 24px;
+  color: var(--text-light);
+  transition: all 0.2s ease-in-out;
+}
