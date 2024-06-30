@@ -1,0 +1,58 @@
+/* phone responsiveness */
+/* for col-sm-12 */
+@media only screen and (max-width: 767px) {
+  /* title */
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    width: 12rem;
+  }
+
+  /* about me */
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .social-icons a {
+    margin: 8px;
+  }
+}
+
+/* before col-sm-12 */
+@media only screen and (max-width: 860px) {
+  section > h3 {
+    padding: 30px 0 20px;
+  }
+  
+br {
+    display: none;
+  }
+
+  .divider {
+    margin: 0 0 10%;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  section > h3 {
+    padding: 24px 0 32px;
+  }
+
+  .title-text h1{
+    font-size: 2rem;
+  }
+
+  .title-text h2{
+    font-size: 1.3rem;
+  }
+
+  .title-text p{
+    font-size: 1rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+}
